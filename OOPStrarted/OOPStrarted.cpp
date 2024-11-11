@@ -313,6 +313,41 @@ public:
 		cout << "\n" << TextMessage << endl;
 	}
 };
+class clsEmployee {
+
+	int _ID;
+	int	    _Salary;
+	string  _FirstName;
+	string  _Lastname;
+	string	_Title;
+	string	_Email;
+	string	_Phone;	
+	string	_Department;
+public:
+
+	clsEmployee(int ID, string FirstName, string Lastname, string Title, string Email,string Phone, int Salary, string Department)
+	{
+		_ID = ID;
+		_FirstName = FirstName;
+		_Lastname = Lastname;
+		_Title = Title;
+		_Email = Email;
+		_Phone = Phone;
+		_Salary = Salary;
+		_Department = Department;
+
+	}
+	void _FullName() 
+	{
+		cout << _FirstName << "" << _Lastname << endl;
+	}
+			
+	void SendEmail() {}
+	void SendSMS() {}
+	void Print() {}
+	
+
+};
 
 
 int main()
