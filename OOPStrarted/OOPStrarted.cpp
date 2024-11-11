@@ -94,6 +94,15 @@ public:
 		_ZipCode = ZipCode;
 	}
 
+	// Copy Constructor
+		clsAddress(clsAddress & old_obj)
+	{
+		_AddressLine1 = old_obj.AddressLine1();
+		_AddressLine2 = old_obj.AddressLine2();
+		_POBox = old_obj.POBox();
+		_ZipCode = old_obj.ZipCode();
+	}
+
 	void SetAddressLine1(string AddressLine1)
 	{
 		_AddressLine1 = AddressLine1;
