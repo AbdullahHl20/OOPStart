@@ -149,12 +149,11 @@ public:
 };
 
 
-
 int main()
 {
 	clsPerson Person1;
-	Person1.FirstName = "Mohammed";
-	Person1.LastName = "Abu-Hadhoud";
+	Person1.FirstName = "Abdullah";
+	Person1.LastName = "Alhelal";
 
 	cout << Person1.FullName() << endl;
 	string S1;
