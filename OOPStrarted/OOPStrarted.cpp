@@ -74,7 +74,7 @@ public:
 	}
 
 	__declspec(property(get = GetFirstName, put = setFirstName)) string FirstName;
-		
+
 };
 
 class clsAddress
@@ -95,7 +95,7 @@ public:
 	}
 
 	// Copy Constructor
-		clsAddress(clsAddress & old_obj)
+	clsAddress(clsAddress& old_obj)
 	{
 		_AddressLine1 = old_obj.AddressLine1();
 		_AddressLine2 = old_obj.AddressLine2();
@@ -204,6 +204,117 @@ public:
 int clsA::counter = 0; //static variable initialisation outside the class
 
 
+class clsAA
+{
+public:
+	static int Function1()
+	{
+		return 10;
+	}
+	int Function2()
+	{
+		return 20;
+	}
+};
+
+
+class clsPersonExercise {
+
+private:
+	int _ID;
+	string _FirstName;
+	string _LastName;
+	string _Email;
+	string _Phone;
+public:
+	clsPersonExercise(int ID, string FirstName, string LastName, string
+		Email, string Phone)
+	{
+		_ID = ID;
+		_FirstName = FirstName;
+		_LastName = LastName;
+		_Email = Email;
+		_Phone = Phone;
+	}
+	//Read Only Property
+	int ID()
+	{
+		return _ID;
+	}
+	//Property Set
+	void setFirstName(string FirstName)
+	{
+		_FirstName = FirstName;
+	}
+	//Property Get
+	string FirstName()
+	{
+		return _FirstName;
+	}
+
+
+	//Property Set
+	void setLastName(string LastName)
+	{
+		_LastName = LastName;
+	}
+	//Property Get
+	string LastName()
+	{
+		return _LastName;
+	}
+	//Property Set
+	void setEmail(string Email)
+	{
+		_Email = Email;
+	}
+	//Property Get
+	string Email()
+	{
+		return _Email;
+	}
+	//Property Set
+	void setPhone(string Phone)
+	{
+		_Phone = Phone;
+	}
+	//Property Get
+	string Phone()
+	{
+		return _Phone;
+	}
+	string FullName()
+	{
+		return _FirstName + " " + _LastName;
+	}
+
+
+	void Print()
+	{
+		cout << "\nInfo:";
+		cout << "\n___________________";
+		cout << "\nID : " << _ID;
+		cout << "\nFirstName: " << _FirstName;
+		cout << "\nLastName : " << _LastName;
+		cout << "\nFull Name: " << FullName();
+		cout << "\nEmail : " << _Email;
+		cout << "\nPhone : " << _Phone;
+		cout << "\n___________________\n";
+	}
+	void SendEmail(string Subject, string Body)
+	{
+		cout << "\nThe following message sent successfully to email: " << _Email;
+		cout << "\nSubject: " << Subject;
+		cout << "\nBody: " << Body << endl;
+	}
+	void SendSMS(string TextMessage)
+	{
+		cout << "\nThe following SMS sent successfully to phone: " << _Phone;
+		cout << "\n" << TextMessage << endl;
+	}
+};
+
+
 int main()
 {
 	clsPerson Person1;
@@ -212,7 +323,7 @@ int main()
 	Fun1();
 	Fun2();
 
-
+	cout << clsAA::Function1() << endl;
 
 	clsA A1, A2, A3;
 	A1.var = 10;
@@ -223,12 +334,17 @@ int main()
 	A3.Print();
 	A1.counter = 500;
 	cout << "\nafter chaning the static member counter in one object:\n";
-		A1.Print();
+	A1.Print();
 	A2.Print();
 	A3.Print();
 
 	cout << Person1.FullName() << endl;
-	string S1;
+
+
+	clsPersonExercise PersonExercise(10, "Mohammed", "Abu-Hadhoud", "my@gmail.com", "0098387727");
+	PersonExercise.Print();
+	PersonExercise.SendEmail("Hi", "How are you?");
+	PersonExercise.SendSMS("How are you?");
 }
 
 
