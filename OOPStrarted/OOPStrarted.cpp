@@ -149,11 +149,47 @@ public:
 };
 
 
+class clsPersonWithde
+{
+public:
+	string FullName;
+	//This is Instructor will be called when object is built.
+	clsPersonWithde()
+	{
+		FullName = "Mohammed Abu-Hadhoud";
+		cout << "\nHi, I'm Constructor";
+	}
+	//This is destructor will be called when object is destroyed.
+	~clsPersonWithde()
+	{
+		cout << "\nHi, I'm Destructor";
+	}
+};
+
+void Fun1()
+{
+	clsPersonWithde Person1;
+	//after exiting from function, person1 will be
+	//destroyed and destructor will be called.
+}
+
+void Fun2()
+{
+	clsPersonWithde* Person2 = new clsPersonWithde;
+	//always use delete whenever you use new, otherwise object
+	//will remain in memory
+	delete Person2;
+}
+
+
 int main()
 {
 	clsPerson Person1;
 	Person1.FirstName = "Abdullah";
 	Person1.LastName = "Alhelal";
+	Fun1();
+	Fun2();
+
 
 	cout << Person1.FullName() << endl;
 	string S1;
