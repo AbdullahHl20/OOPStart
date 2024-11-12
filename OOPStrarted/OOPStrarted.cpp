@@ -314,13 +314,24 @@ public:
 	}
 };
 
-class clsEmployee : public clsPerson
+class clsEmployee : public clsPersonExercise
 {
 private:
 	string _Title;
 	string _Department;
 	float _Salary;
 public:
+
+	clsEmployee(int ID, string FirstName, string LastName, string
+		Email, string Phone, string Title, string Department, float Salary)
+		: clsPersonExercise(ID, FirstName, LastName, Email, Phone)
+	{
+		_Title = Title;
+		_Department = Department;
+		_Salary = Salary;
+	}
+
+
 	//Property Set
 	void setTitle(string Title)
 	{
@@ -335,6 +346,7 @@ public:
 	void setDepartment(string Department)
 	{
 		_Department = Department;
+
 	}
 	//Property Get
 	string Department()
