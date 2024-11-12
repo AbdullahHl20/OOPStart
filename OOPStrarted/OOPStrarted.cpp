@@ -313,63 +313,44 @@ public:
 		cout << "\n" << TextMessage << endl;
 	}
 };
-class clsEmployee {
 
-	int _ID;
-	int	    _Salary;
-	string  _FirstName;
-	string  _Lastname;
-	string	_Title;
-	string	_Email;
-	string	_Phone;	
-	string	_Department;
+class clsEmployee : public clsPerson
+{
+private:
+	string _Title;
+	string _Department;
+	float _Salary;
 public:
-
-	clsEmployee(int ID, string FirstName, string Lastname, string Title, string Email,string Phone, int Salary, string Department)
+	//Property Set
+	void setTitle(string Title)
 	{
-		_ID = ID;
-		_FirstName = FirstName;
-		_Lastname = Lastname;
 		_Title = Title;
-		_Email = Email;
-		_Phone = Phone;
-		_Salary = Salary;
+	}
+	//Property Get
+	string Title()
+	{
+		return _Title;
+	}
+	//Property Set
+	void setDepartment(string Department)
+	{
 		_Department = Department;
-
 	}
-	void FullName() 
+	//Property Get
+	string Department()
 	{
-		cout << _FirstName << "" << _Lastname << endl;
+		return _Department;
 	}
-		
-	void Print() 
+	//Property Set
+	void setSalary(float Salary)
 	{
-
-		cout << "\nInfo:";
-		cout << "\n___________________";
-		cout << "\nID : " << _ID;
-		cout << "\nFirstName: " << _FirstName;
-		cout << "\nLastName : " << _Lastname;
-		cout << "\nFull Name: " << _FirstName << "" << _Lastname;
-		cout << "\nEmail : " << _Email;
-		cout << "\nPhone : " << _Phone;
-		cout << "\n___________________\n";
+		_Salary = Salary;
 	}
-
-	void SendEmail(string Subject, string Body)
+	//Property Get
+	float Salary()
 	{
-		cout << "\nThe following message sent successfully to email: " << _Email;
-		cout << "\nSubject: " << Subject;
-		cout << "\nBody: " << Body << endl;
+		return _Salary;
 	}
-
-	void SendSMS(string TextMessage)
-	{
-		cout << "\nThe following SMS sent successfully to phone: " << _Phone;
-		cout << "\n" << TextMessage << endl;
-	}
-	
-
 };
 
 
