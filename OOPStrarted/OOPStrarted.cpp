@@ -337,14 +337,37 @@ public:
 		_Department = Department;
 
 	}
-	void _FullName() 
+	void FullName() 
 	{
 		cout << _FirstName << "" << _Lastname << endl;
 	}
-			
-	void SendEmail() {}
-	void SendSMS() {}
-	void Print() {}
+		
+	void Print() 
+	{
+
+		cout << "\nInfo:";
+		cout << "\n___________________";
+		cout << "\nID : " << _ID;
+		cout << "\nFirstName: " << _FirstName;
+		cout << "\nLastName : " << _Lastname;
+		cout << "\nFull Name: " << _FirstName << "" << _Lastname;
+		cout << "\nEmail : " << _Email;
+		cout << "\nPhone : " << _Phone;
+		cout << "\n___________________\n";
+	}
+
+	void SendEmail(string Subject, string Body)
+	{
+		cout << "\nThe following message sent successfully to email: " << _Email;
+		cout << "\nSubject: " << Subject;
+		cout << "\nBody: " << Body << endl;
+	}
+
+	void SendSMS(string TextMessage)
+	{
+		cout << "\nThe following SMS sent successfully to phone: " << _Phone;
+		cout << "\n" << TextMessage << endl;
+	}
 	
 
 };
