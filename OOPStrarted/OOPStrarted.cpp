@@ -363,6 +363,22 @@ public:
 	{
 		return _Salary;
 	}
+
+	void Print()
+	{
+		cout << "\nInfo:";
+		cout << "\n___________________";
+		cout << "\nID : " << ID();
+		cout << "\nFirstName : " << FirstName();
+		cout << "\nLastName : " << LastName();
+		cout << "\nFull Name : " << FullName();
+		cout << "\nEmail : " << Email();
+		cout << "\nPhone : " << Phone();
+		cout << "\nTitle : " << _Title;
+		cout << "\nDepartment: " << _Department;
+		cout << "\nSalary : " << _Salary;
+		cout << "\n___________________\n";
+	}
 };
 
 
