@@ -189,33 +189,35 @@ void Fun2()
 
 class clsA
 {
-public:
-	int var;
-	static int counter;
-	clsA()
+private:
+	//only accessible inside this class, neither derived classes not outside class.
+		int _Var1;
+	void _Fun1()
 	{
-		counter++;
+		cout << "Function 1";
 	}
-	void Print()
+protected:
+	//only accessible inside this class and all derived classes,but not outside class
+		int Var2;
+	void Fun2()
 	{
-		cout << "\nvar = " << var << endl;
-		cout << "counter = " << counter << endl;
+		cout << "Function 1";
+	}
+public:
+	// Accessible inside this class, all derived classes, andoutside class
+		int Var3;
+	void Fun3()
+	{
+		cout << "Function 1";
 	}
 };
 
-int clsA::counter = 0; //static variable initialisation outside the class
-
-
-class clsAA
+class clsB : public clsA
 {
 public:
-	static int Function1()
+	void Func1()
 	{
-		return 10;
-	}
-	int Function2()
-	{
-		return 20;
+		cout << clsA::Var2;
 	}
 };
 
