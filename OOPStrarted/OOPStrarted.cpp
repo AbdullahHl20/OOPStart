@@ -420,7 +420,7 @@ public:
 		cout << "\nTitle : " << Title();
 		cout << "\nDepartment: " << Department();
 		cout << "\nSalary : " << to_string(Salary());
-		cout << "\nMainProgrammingLanguage : " << _MainProgrammingLanguage;
+		cout << "\nMainProgrammingLanguage : " << MainProgrammingLanguage();
 		cout << "\n___________________\n";
 	}
 
