@@ -383,7 +383,7 @@ public:
 	}
 };
 
-class clsDeveloper :clsEmployee
+class clsDeveloper : public clsEmployee
 {
 private:
 	string _MainProgrammingLanguage;
@@ -455,8 +455,9 @@ int main()
 
 	clsDeveloper PersonExercise(10, "Mohammed", "Abu-Hadhoud", "my@gmail.com", "0098387727","title","test",15,"main");
 	PersonExercise.Print();
-	/*PersonExercise.SendEmail("Hi", "How are you?");
-	PersonExercise.SendSMS("How are you?");*/
+
+	PersonExercise.SendEmail("Hi", "How are you?");
+	PersonExercise.SendSMS("How are you?");
 }
 
 
