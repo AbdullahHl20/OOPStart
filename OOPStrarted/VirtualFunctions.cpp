@@ -27,16 +27,15 @@ public:
 
 //int main()
 //{
-//	clsEmployee Employee1;
-//	clsStudent Student1;
-// 
-//	Employee1.Print();
-//	Student1.Print();
-// 
-//	clsPerson* Person1 = &Employee1;
-//	clsPerson* Person2 = &Student1;
-//	Person1->Print();
-//	Person2->Print();
-//	system("pause>0");
-//	return 0;
-//}
+//clsEmployee Employee1;
+//clsStudent Student1;
+////Early-Static Binding: at compilation time
+//Employee1.Print();
+//Student1.Print();
+//clsPerson* Person1 = &Employee1;
+//clsPerson* Person2 = &Student1;
+////Late-Dynamic Binding: at runtime
+//Person1->Print();
+//Person2->Print();
+//system("pause>0");
+////}
