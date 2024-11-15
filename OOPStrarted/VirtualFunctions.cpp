@@ -110,6 +110,45 @@ public:
 	}
 };
 
+class clsPersonWithstruct {
+
+	struct stAddress
+	{
+		string AddressLine1;
+		string AddressLine2;
+		string City;
+		string Country;
+	};
+
+public:
+	string FullName;
+	stAddress Address;
+
+	clsPersonWithstruct()
+	{
+		FullName = "Mohammed Abu-Hadhoud";
+		Address.AddressLine1 = "Building 10";
+		Address.AddressLine2 = "Queen Rania Street";
+		Address.City = "Amman";
+		Address.Country = "Jordan";
+	}
+
+	void PrintAddress()
+	{
+		cout << "\nAddress:\n";
+		cout << Address.AddressLine1 << endl;
+		cout << Address.AddressLine2 << endl;
+		cout << Address.City << endl;
+		cout << Address.Country << endl;
+	}
+
+};
+
+
+int main() 
+{
+
+}
 //int main()
 //{
 //clsEmployee Employee1;
