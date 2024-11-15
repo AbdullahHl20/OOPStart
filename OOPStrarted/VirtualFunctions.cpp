@@ -66,7 +66,8 @@ public:
 	};
 };
 
-//freind Class 
+
+
 class clsA
 {
 private:
@@ -83,7 +84,19 @@ public:
 	}
 	//This will grant access for everything to class B
 	friend class clsB; //friend class
+	friend int MySum(clsA A1); //friend Function
 };
+
+//this function is a normal function and not a member of any class
+int MySum(clsA A1)
+{
+	return A1._Var1 + A1.Var2 + A1._Var3;
+}
+
+//int Fun2(clsA A1)
+//{
+// return A1._Var1 + A1.Var2 + A1._Var3;
+//}
 
 class clsB
 {
