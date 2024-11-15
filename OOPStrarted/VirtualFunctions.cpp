@@ -8,14 +8,14 @@ public:
 		cout << "Hi, i'm a person!\n ";
 	}
 };
-class clsEmployee : public clsPerson
-{
-public:
-	void Print()
-	{
-		cout << "Hi, I'm an Employee\n";
-	}
-};
+//class clsEmployee : public clsPerson
+//{
+//public:
+//	void Print()
+//	{
+//		cout << "Hi, I'm an Employee\n";
+//	}
+//};
 class clsStudent : public clsPerson
 {
 public:
