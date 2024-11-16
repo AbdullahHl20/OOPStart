@@ -133,6 +133,7 @@
   <ItemGroup>
     <ClInclude Include="clsDate.h" />
     <ClInclude Include="clsEmployee.h" />
+    <ClInclude Include="clsPeriod.h" />
     <ClInclude Include="clsPersonExercise.h" />
     <ClInclude Include="clsString.h" />
   </ItemGroup>
