@@ -181,13 +181,6 @@ public:
 
 };
 
-
-
-
-int main() 
-{
-
-}
 //int main()
 //{
 //clsEmployee Employee1;

@@ -2,9 +2,7 @@
 //
 
 #include <iostream>
-#include <string>
-
-#include "clsEmployee.h";
+#include "clsEmployee.h"
 using namespace std;
 
 class clsPerson
@@ -312,7 +310,7 @@ int main()
 	Person1.LastName = "Alhelal";
 	Fun1();
 	Fun2();
-
+	
 	/*cout << clsAA::Function1() << endl;
 
 	clsA A1, A2, A3;
