@@ -136,6 +136,7 @@
     <ClInclude Include="clsPeriod.h" />
     <ClInclude Include="clsPersonExercise.h" />
     <ClInclude Include="clsString.h" />
+    <ClInclude Include="clsUtil.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
